@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
-import { ToJson } from '@spryker/utils';
+import { jsonAttribute } from '@spryker/utils';
 
 interface businessUnit {
     businessUnitName: string;
@@ -10,6 +10,7 @@ interface businessUnit {
 }
 
 @Component({
+    standalone: false,
     selector: 'mp-merchant-address-list',
     templateUrl: './merchant-address-list.component.html',
     styleUrls: ['./merchant-address-list.component.less'],
@@ -20,5 +21,5 @@ interface businessUnit {
     },
 })
 export class MerchantAddressListComponent {
-    @Input() @ToJson() businessUnitList: businessUnit[];
+    @Input({ transform: jsonAttribute }) businessUnitList: businessUnit[];
 }

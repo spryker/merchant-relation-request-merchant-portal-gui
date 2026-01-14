@@ -13,7 +13,7 @@
                 <button #hiddenButton class="mp-merchant-relation-edit__button-hidden"></button>
                 <input type="hidden" [name]="actinName" />
 
-                <ng-container *ngFor="let action of actions">
+                @for (action of actions; track action) {
                     <spy-button
                         class="mp-merchant-relation-edit__button"
                         [variant]="action.buttonVariant"
@@ -21,9 +21,8 @@
                     >
                         {{ action.label }}
                     </spy-button>
-
                     <ng-template #modal let-data let-modal="modalRef">{{ action.modalBody }}</ng-template>
-                </ng-container>
+                }
             </span>
         </div>
         <div class="mp-merchant-relation-edit__created-date">

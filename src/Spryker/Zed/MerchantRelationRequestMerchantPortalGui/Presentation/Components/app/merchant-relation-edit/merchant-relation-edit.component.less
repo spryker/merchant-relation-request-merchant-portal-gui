@@ -24,11 +24,11 @@
 );
 @merchant-relation-edit-form-row-col-min-height: var(
     --spy-merchant-relation-edit-form-row-col-min-height,
-    calc(@input-height-base + @merchant-relation-edit-form-row-padding * 2)
+    calc(var(--spy-input-height-base, 42px) + @merchant-relation-edit-form-row-padding * 2)
 );
 @merchant-relation-edit-form-row-col-checkbox-min-height: var(
     --spy-merchant-relation-edit-form-row-col-checkbox-min-height,
-    calc(@input-height-base + @merchant-relation-edit-form-row-padding * 1.5)
+    calc(var(--spy-input-height-base, 42px) + @merchant-relation-edit-form-row-padding * 1.5)
 );
 @merchant-relation-edit-form-row-base-width: var(--spy-merchant-relation-edit-form-row-base-width, 275px);
 @merchant-relation-edit-form-row-date-range-base-width: var(
@@ -40,7 +40,7 @@
     10px
 );
 
-.@{ajax-form-prefix-cls}-container {
+.spy-ajax-form-container {
     overflow-y: auto;
 
     &--loading {
@@ -61,7 +61,7 @@
         background: @spy-white;
         padding: @merchant-relation-edit-header-padding;
 
-        .@{headline-prefix-cls} {
+        .spy-headline {
             padding-bottom: 0;
         }
     }
@@ -103,8 +103,8 @@
         display: block;
         padding-bottom: @merchant-relation-edit-card-padding-bottom;
 
-        .@{table-prefix-cls},
-        .@{table-filters-feature-prefix-cls} {
+        .ant-table,
+        .spy-table-filters-feature {
             background: @gray-lighter;
         }
     }

@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import { ButtonVariant } from '@spryker/button';
 import { ModalService } from '@spryker/modal';
-import { ToJson } from '@spryker/utils';
+import { jsonAttribute } from '@spryker/utils';
 
 interface Action {
     name: string;
@@ -24,6 +24,7 @@ interface Action {
 }
 
 @Component({
+    standalone: false,
     selector: 'mp-merchant-relation-edit',
     templateUrl: './merchant-relation-edit.component.html',
     styleUrls: ['./merchant-relation-edit.component.less'],
@@ -34,13 +35,16 @@ interface Action {
     },
 })
 export class MerchantRelationEditComponent {
-    @Input() @ToJson() actions?: Action[] = [];
+    @Input({ transform: jsonAttribute }) actions?: Action[] = [];
     @ViewChild('hiddenButton') hiddenButton: ElementRef<HTMLButtonElement>;
 
     openPopupName: string;
     actinName: string;
 
-    constructor(private modalService: ModalService, private cdr: ChangeDetectorRef) {}
+    constructor(
+        private modalService: ModalService,
+        private cdr: ChangeDetectorRef,
+    ) {}
 
     openConfirm(action: Action): void {
         this.modalService
