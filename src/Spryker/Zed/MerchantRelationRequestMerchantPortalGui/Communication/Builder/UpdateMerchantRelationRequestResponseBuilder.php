@@ -119,7 +119,7 @@ class UpdateMerchantRelationRequestResponseBuilder implements UpdateMerchantRela
     ): ZedUiFormResponseBuilderInterface {
         $field = $form->get(MerchantRelationRequestTransfer::ASSIGNEE_COMPANY_BUSINESS_UNITS);
 
-        /** @var array<\Symfony\Component\Form\FormError> $errors */
+        /** @var \Symfony\Component\Form\FormErrorIterator<\Symfony\Component\Form\FormError> $errors */
         $errors = $field->getErrors();
         foreach ($errors as $error) {
             $zedUiFormResponseBuilder->addErrorNotification($this->translatorFacade->trans($error->getMessage()));
