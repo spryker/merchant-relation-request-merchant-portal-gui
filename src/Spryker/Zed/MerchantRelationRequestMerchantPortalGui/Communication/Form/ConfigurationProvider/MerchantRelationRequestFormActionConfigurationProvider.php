@@ -95,10 +95,6 @@ class MerchantRelationRequestFormActionConfigurationProvider implements Merchant
      */
     protected MerchantRelationRequestMerchantPortalGuiConfig $merchantRelationRequestMerchantPortalGuiConfig;
 
-    /**
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Facade\MerchantRelationRequestMerchantPortalGuiToTranslatorFacadeInterface $translatorFacade
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\MerchantRelationRequestMerchantPortalGuiConfig $merchantRelationRequestMerchantPortalGuiConfig
-     */
     public function __construct(
         MerchantRelationRequestMerchantPortalGuiToTranslatorFacadeInterface $translatorFacade,
         MerchantRelationRequestMerchantPortalGuiConfig $merchantRelationRequestMerchantPortalGuiConfig
@@ -160,11 +156,6 @@ class MerchantRelationRequestFormActionConfigurationProvider implements Merchant
             ->toArray(true, true);
     }
 
-    /**
-     * @param string $status
-     *
-     * @return bool
-     */
     protected function isEditableMerchantRelationRequest(string $status): bool
     {
         return in_array($status, $this->merchantRelationRequestMerchantPortalGuiConfig->getEditableMerchantRelationRequestStatuses(), true);

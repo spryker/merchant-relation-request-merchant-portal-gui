@@ -27,11 +27,6 @@ class MerchantRelationRequestMerchantPortalGuiToMerchantRelationRequestFacadeBri
         $this->merchantRelationRequestFacade = $merchantRelationRequestFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestCriteriaTransfer $merchantRelationRequestCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationRequestCollectionTransfer
-     */
     public function getMerchantRelationRequestCollection(
         MerchantRelationRequestCriteriaTransfer $merchantRelationRequestCriteriaTransfer
     ): MerchantRelationRequestCollectionTransfer {
@@ -39,11 +34,6 @@ class MerchantRelationRequestMerchantPortalGuiToMerchantRelationRequestFacadeBri
             ->getMerchantRelationRequestCollection($merchantRelationRequestCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestCriteriaTransfer $merchantRelationRequestCriteriaTransfer
-     *
-     * @return int
-     */
     public function countMerchantRelationRequests(
         MerchantRelationRequestCriteriaTransfer $merchantRelationRequestCriteriaTransfer
     ): int {
@@ -51,11 +41,6 @@ class MerchantRelationRequestMerchantPortalGuiToMerchantRelationRequestFacadeBri
             ->countMerchantRelationRequests($merchantRelationRequestCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestCollectionRequestTransfer $merchantRelationRequestCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationRequestCollectionResponseTransfer
-     */
     public function updateMerchantRelationRequestCollection(
         MerchantRelationRequestCollectionRequestTransfer $merchantRelationRequestCollectionRequestTransfer
     ): MerchantRelationRequestCollectionResponseTransfer {

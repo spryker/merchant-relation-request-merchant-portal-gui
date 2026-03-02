@@ -39,11 +39,6 @@ class CustomerForm extends AbstractType
      */
     protected const LABEL_PHONE = 'Phone';
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([

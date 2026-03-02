@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\MerchantRelationRequestTransfer;
 
 interface MerchantRelationTableUrlBuilderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestTransfer $merchantRelationRequestTransfer
-     *
-     * @return string|null
-     */
     public function buildMerchantRelationTableUrl(
         MerchantRelationRequestTransfer $merchantRelationRequestTransfer
     ): ?string;

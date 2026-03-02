@@ -79,12 +79,6 @@ class UpdateMerchantRelationRequestController extends AbstractController
         );
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormInterface $merchantRelationRequestForm
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestTransfer $merchantRelationRequestTransfer
-     *
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
     protected function executeMerchantRelationRequestFormSubmission(
         FormInterface $merchantRelationRequestForm,
         MerchantRelationRequestTransfer $merchantRelationRequestTransfer
@@ -120,14 +114,6 @@ class UpdateMerchantRelationRequestController extends AbstractController
         return $this->getResponse($merchantRelationRequestForm, $merchantRelationRequestTransfer, true);
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormInterface $merchantRelationRequestForm
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestTransfer $merchantRelationRequestTransfer
-     * @param bool|null $isSuccess
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestCollectionResponseTransfer|null $merchantRelationRequestCollectionResponseTransfer
-     *
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
     protected function getResponse(
         FormInterface $merchantRelationRequestForm,
         MerchantRelationRequestTransfer $merchantRelationRequestTransfer,
@@ -181,11 +167,6 @@ class UpdateMerchantRelationRequestController extends AbstractController
         return new JsonResponse($responseData);
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormInterface $merchantRelationRequestForm
-     *
-     * @return string|null
-     */
     protected function findClickedButtonName(FormInterface $merchantRelationRequestForm): ?string
     {
         // @phpstan-ignore-next-line
@@ -198,11 +179,6 @@ class UpdateMerchantRelationRequestController extends AbstractController
         return null;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestTransfer $merchantRelationRequestTransfer
-     *
-     * @return bool
-     */
     protected function isEditableMerchantRelationRequest(MerchantRelationRequestTransfer $merchantRelationRequestTransfer): bool
     {
         return in_array(

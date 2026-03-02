@@ -54,11 +54,6 @@ class CompanyBusinessUnitAddressBuilder implements CompanyBusinessUnitAddressBui
         return $companyBusinessUnitAddresses;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUnitAddressTransfer $companyUnitAddressTransfer
-     *
-     * @return string
-     */
     protected function buildCompanyBusinessUnitAddress(CompanyUnitAddressTransfer $companyUnitAddressTransfer): string
     {
         $companyBusinessUnitAddress = sprintf('%s %s', $companyUnitAddressTransfer->getAddress1(), $companyUnitAddressTransfer->getAddress2());

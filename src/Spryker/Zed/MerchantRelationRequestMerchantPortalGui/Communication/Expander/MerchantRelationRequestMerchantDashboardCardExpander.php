@@ -45,12 +45,6 @@ class MerchantRelationRequestMerchantDashboardCardExpander implements MerchantRe
      */
     protected MerchantRelationRequestMerchantPortalGuiToMerchantUserFacadeInterface $merchantUserFacade;
 
-    /**
-     * @param \Twig\Environment $twigEnvironment
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\MerchantRelationRequestMerchantPortalGuiConfig $merchantRelationRequestMerchantPortalGuiConfig
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Facade\MerchantRelationRequestMerchantPortalGuiToMerchantRelationRequestFacadeInterface $merchantRelationRequestFacade
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Facade\MerchantRelationRequestMerchantPortalGuiToMerchantUserFacadeInterface $merchantUserFacade
-     */
     public function __construct(
         Environment $twigEnvironment,
         MerchantRelationRequestMerchantPortalGuiConfig $merchantRelationRequestMerchantPortalGuiConfig,
@@ -63,11 +57,6 @@ class MerchantRelationRequestMerchantDashboardCardExpander implements MerchantRe
         $this->merchantUserFacade = $merchantUserFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantDashboardCardTransfer $merchantDashboardCardTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantDashboardCardTransfer
-     */
     public function expand(MerchantDashboardCardTransfer $merchantDashboardCardTransfer): MerchantDashboardCardTransfer
     {
         $merchantDashboardCardTransfer = $this->expandContent($merchantDashboardCardTransfer);
@@ -76,11 +65,6 @@ class MerchantRelationRequestMerchantDashboardCardExpander implements MerchantRe
         return $merchantDashboardCardTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantDashboardCardTransfer $merchantDashboardCardTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantDashboardCardTransfer
-     */
     protected function expandContent(
         MerchantDashboardCardTransfer $merchantDashboardCardTransfer
     ): MerchantDashboardCardTransfer {
@@ -113,11 +97,6 @@ class MerchantRelationRequestMerchantDashboardCardExpander implements MerchantRe
         return $merchantDashboardCardTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantDashboardCardTransfer $merchantDashboardCardTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantDashboardCardTransfer
-     */
     protected function expandActions(
         MerchantDashboardCardTransfer $merchantDashboardCardTransfer
     ): MerchantDashboardCardTransfer {

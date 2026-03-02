@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\MerchantRelationRequestCollectionResponseTransfer;
 
 interface MerchantNotificationSenderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestCollectionResponseTransfer $merchantRelationRequestCollectionResponseTransfer
-     *
-     * @return void
-     */
     public function sentNotificationToMerchant(
         MerchantRelationRequestCollectionResponseTransfer $merchantRelationRequestCollectionResponseTransfer
     ): void;

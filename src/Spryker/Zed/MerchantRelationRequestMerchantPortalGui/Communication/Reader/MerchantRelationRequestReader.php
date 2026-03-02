@@ -33,11 +33,6 @@ class MerchantRelationRequestReader implements MerchantRelationRequestReaderInte
      */
     protected MerchantRelationRequestMerchantPortalGuiConfig $merchantRelationRequestMerchantPortalGuiConfig;
 
-    /**
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Facade\MerchantRelationRequestMerchantPortalGuiToMerchantRelationRequestFacadeInterface $merchantRelationRequestFacade
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Facade\MerchantRelationRequestMerchantPortalGuiToMerchantUserFacadeInterface $merchantUserFacade
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\MerchantRelationRequestMerchantPortalGuiConfig $merchantRelationRequestMerchantPortalGuiConfig
-     */
     public function __construct(
         MerchantRelationRequestMerchantPortalGuiToMerchantRelationRequestFacadeInterface $merchantRelationRequestFacade,
         MerchantRelationRequestMerchantPortalGuiToMerchantUserFacadeInterface $merchantUserFacade,
@@ -48,11 +43,6 @@ class MerchantRelationRequestReader implements MerchantRelationRequestReaderInte
         $this->merchantRelationRequestMerchantPortalGuiConfig = $merchantRelationRequestMerchantPortalGuiConfig;
     }
 
-    /**
-     * @param int $idMerchantRelationRequest
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationRequestTransfer|null
-     */
     public function findCurrentMerchantUserMerchantRelationRequestByIdMerchantRelationRequest(
         int $idMerchantRelationRequest
     ): ?MerchantRelationRequestTransfer {

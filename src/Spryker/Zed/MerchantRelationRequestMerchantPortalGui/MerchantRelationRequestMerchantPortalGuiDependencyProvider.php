@@ -79,11 +79,6 @@ class MerchantRelationRequestMerchantPortalGuiDependencyProvider extends Abstrac
      */
     public const SERVICE_TWIG = 'twig';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = $this->addMerchantRelationRequestFacade($container);
@@ -100,11 +95,6 @@ class MerchantRelationRequestMerchantPortalGuiDependencyProvider extends Abstrac
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMerchantRelationRequestFacade(Container $container): Container
     {
         $container->set(static::FACADE_MERCHANT_RELATION_REQUEST, function (Container $container) {
@@ -116,11 +106,6 @@ class MerchantRelationRequestMerchantPortalGuiDependencyProvider extends Abstrac
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addTranslatorFacade(Container $container): Container
     {
         $container->set(static::FACADE_TRANSLATOR, function (Container $container) {
@@ -132,11 +117,6 @@ class MerchantRelationRequestMerchantPortalGuiDependencyProvider extends Abstrac
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMerchantUserFacade(Container $container): Container
     {
         $container->set(static::FACADE_MERCHANT_USER, function (Container $container) {
@@ -148,11 +128,6 @@ class MerchantRelationRequestMerchantPortalGuiDependencyProvider extends Abstrac
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMailFacade(Container $container): Container
     {
         $container->set(static::FACADE_MAIL, function (Container $container) {
@@ -164,11 +139,6 @@ class MerchantRelationRequestMerchantPortalGuiDependencyProvider extends Abstrac
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addGlossaryFacade(Container $container): Container
     {
         $container->set(static::FACADE_GLOSSARY, function (Container $container) {
@@ -180,11 +150,6 @@ class MerchantRelationRequestMerchantPortalGuiDependencyProvider extends Abstrac
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addGuiTableHttpDataRequestExecutor(Container $container): Container
     {
         $container->set(static::SERVICE_GUI_TABLE_HTTP_DATA_REQUEST_EXECUTOR, function (Container $container) {
@@ -194,11 +159,6 @@ class MerchantRelationRequestMerchantPortalGuiDependencyProvider extends Abstrac
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addGuiTableFactory(Container $container): Container
     {
         $container->set(static::SERVICE_GUI_TABLE_FACTORY, function (Container $container) {
@@ -208,11 +168,6 @@ class MerchantRelationRequestMerchantPortalGuiDependencyProvider extends Abstrac
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addZedUiFactory(Container $container): Container
     {
         $container->set(static::SERVICE_ZED_UI_FACTORY, function (Container $container) {
@@ -222,11 +177,6 @@ class MerchantRelationRequestMerchantPortalGuiDependencyProvider extends Abstrac
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addDateTimeService(Container $container): Container
     {
         $container->set(static::SERVICE_DATE_TIME, function (Container $container) {
@@ -236,11 +186,6 @@ class MerchantRelationRequestMerchantPortalGuiDependencyProvider extends Abstrac
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addTwigEnvironment(Container $container): Container
     {
         $container->set(static::SERVICE_TWIG, function (Container $container) {

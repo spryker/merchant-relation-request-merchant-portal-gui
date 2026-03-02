@@ -43,11 +43,6 @@ class IsOpenForRelationRequestFormType extends AbstractType
         $this->addIsOpenForRelationRequestTypeField($builder);
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormBuilderInterface $builder
-     *
-     * @return void
-     */
     protected function addIsOpenForRelationRequestTypeField(FormBuilderInterface $builder): void
     {
         $builder

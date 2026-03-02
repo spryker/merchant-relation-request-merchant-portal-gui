@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\MerchantDashboardCardTransfer;
 
 interface MerchantRelationRequestMerchantDashboardCardExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantDashboardCardTransfer $merchantDashboardCardTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantDashboardCardTransfer
-     */
     public function expand(MerchantDashboardCardTransfer $merchantDashboardCardTransfer): MerchantDashboardCardTransfer;
 }

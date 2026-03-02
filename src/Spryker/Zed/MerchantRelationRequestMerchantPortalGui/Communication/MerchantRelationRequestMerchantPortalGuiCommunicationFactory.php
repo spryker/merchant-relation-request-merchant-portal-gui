@@ -56,9 +56,6 @@ use Twig\Environment;
  */
 class MerchantRelationRequestMerchantPortalGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\GuiTable\ConfigurationProvider\MerchantRelationRequestGuiTableConfigurationProviderInterface
-     */
     public function createMerchantRelationRequestGuiTableConfigurationProvider(): MerchantRelationRequestGuiTableConfigurationProviderInterface
     {
         return new MerchantRelationRequestGuiTableConfigurationProvider(
@@ -69,9 +66,6 @@ class MerchantRelationRequestMerchantPortalGuiCommunicationFactory extends Abstr
         );
     }
 
-    /**
-     * @return \Spryker\Shared\GuiTable\DataProvider\GuiTableDataProviderInterface
-     */
     public function createMerchantRelationRequestGuiTableDataProvider(): GuiTableDataProviderInterface
     {
         return new MerchantRelationRequestGuiTableDataProvider(
@@ -82,17 +76,11 @@ class MerchantRelationRequestMerchantPortalGuiCommunicationFactory extends Abstr
         );
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\GuiTable\Mapper\MerchantRelationRequestGuiTableMapperInterface
-     */
     public function createMerchantRelationRequestGuiTableMapper(): MerchantRelationRequestGuiTableMapperInterface
     {
         return new MerchantRelationRequestGuiTableMapper();
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Sender\MerchantNotificationSenderInterface
-     */
     public function createMerchantNotificationSender(): MerchantNotificationSenderInterface
     {
         return new MerchantNotificationSender(
@@ -101,17 +89,11 @@ class MerchantRelationRequestMerchantPortalGuiCommunicationFactory extends Abstr
         );
     }
 
-    /**
-     * @return \Symfony\Component\Form\FormTypeInterface
-     */
     public function createIsOpenForRelationRequestFormType(): FormTypeInterface
     {
         return new IsOpenForRelationRequestFormType();
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Reader\MerchantRelationRequestReaderInterface
-     */
     public function createMerchantRelationRequestReader(): MerchantRelationRequestReaderInterface
     {
         return new MerchantRelationRequestReader(
@@ -132,33 +114,21 @@ class MerchantRelationRequestMerchantPortalGuiCommunicationFactory extends Abstr
         return $this->getFormFactory()->create(MerchantRelationRequestForm::class, $data, $options);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Form\DataProvider\MerchantRelationRequestFormDataProviderInterface
-     */
     public function createMerchantRelationRequestFormDataProvider(): MerchantRelationRequestFormDataProviderInterface
     {
         return new MerchantRelationRequestFormDataProvider();
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Builder\CompanyBusinessUnitAddressBuilderInterface
-     */
     public function createCompanyBusinessUnitAddressBuilder(): CompanyBusinessUnitAddressBuilderInterface
     {
         return new CompanyBusinessUnitAddressBuilder();
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Updater\MerchantRelationRequestUpdaterInterface
-     */
     public function createMerchantRelationRequestUpdater(): MerchantRelationRequestUpdaterInterface
     {
         return new MerchantRelationRequestUpdater($this->getMerchantRelationRequestFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Facade\MerchantRelationRequestMerchantPortalGuiToMerchantRelationRequestFacadeInterface
-     */
     public function getMerchantRelationRequestFacade(): MerchantRelationRequestMerchantPortalGuiToMerchantRelationRequestFacadeInterface
     {
         return $this->getProvidedDependency(MerchantRelationRequestMerchantPortalGuiDependencyProvider::FACADE_MERCHANT_RELATION_REQUEST);
@@ -172,9 +142,6 @@ class MerchantRelationRequestMerchantPortalGuiCommunicationFactory extends Abstr
         return new AssigneeCompanyBusinessUnitsDataTransformer();
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Builder\UpdateMerchantRelationRequestResponseBuilderInterface
-     */
     public function createUpdateMerchantRelationRequestResponseBuilder(): UpdateMerchantRelationRequestResponseBuilderInterface
     {
         return new UpdateMerchantRelationRequestResponseBuilder(
@@ -184,9 +151,6 @@ class MerchantRelationRequestMerchantPortalGuiCommunicationFactory extends Abstr
         );
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Form\ConfigurationProvider\MerchantRelationRequestFormActionConfigurationProviderInterface
-     */
     public function createMerchantRelationRequestFormActionConfigurationProvider(): MerchantRelationRequestFormActionConfigurationProviderInterface
     {
         return new MerchantRelationRequestFormActionConfigurationProvider(
@@ -195,17 +159,11 @@ class MerchantRelationRequestMerchantPortalGuiCommunicationFactory extends Abstr
         );
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Builder\MerchantRelationTableUrlBuilderInterface
-     */
     public function createMerchantRelationTableUrlBuilder(): MerchantRelationTableUrlBuilderInterface
     {
         return new MerchantRelationTableUrlBuilder($this->getConfig(), $this->getDateTimeService());
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Expander\MerchantRelationRequestMerchantDashboardCardExpanderInterface
-     */
     public function createMerchantRelationRequestMerchantDashboardCardExpander(): MerchantRelationRequestMerchantDashboardCardExpanderInterface
     {
         return new MerchantRelationRequestMerchantDashboardCardExpander(
@@ -216,73 +174,46 @@ class MerchantRelationRequestMerchantPortalGuiCommunicationFactory extends Abstr
         );
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Facade\MerchantRelationRequestMerchantPortalGuiToTranslatorFacadeInterface
-     */
     public function getTranslatorFacade(): MerchantRelationRequestMerchantPortalGuiToTranslatorFacadeInterface
     {
         return $this->getProvidedDependency(MerchantRelationRequestMerchantPortalGuiDependencyProvider::FACADE_TRANSLATOR);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Facade\MerchantRelationRequestMerchantPortalGuiToMerchantUserFacadeInterface
-     */
     public function getMerchantUserFacade(): MerchantRelationRequestMerchantPortalGuiToMerchantUserFacadeInterface
     {
         return $this->getProvidedDependency(MerchantRelationRequestMerchantPortalGuiDependencyProvider::FACADE_MERCHANT_USER);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Facade\MerchantRelationRequestMerchantPortalGuiToMailFacadeInterface
-     */
     public function getMailFacade(): MerchantRelationRequestMerchantPortalGuiToMailFacadeInterface
     {
         return $this->getProvidedDependency(MerchantRelationRequestMerchantPortalGuiDependencyProvider::FACADE_MAIL);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Facade\MerchantRelationRequestMerchantPortalGuiToGlossaryFacadeInterface
-     */
     public function getGlossaryFacade(): MerchantRelationRequestMerchantPortalGuiToGlossaryFacadeInterface
     {
         return $this->getProvidedDependency(MerchantRelationRequestMerchantPortalGuiDependencyProvider::FACADE_GLOSSARY);
     }
 
-    /**
-     * @return \Spryker\Shared\GuiTable\Http\GuiTableDataRequestExecutorInterface
-     */
     public function getGuiTableHttpDataRequestExecutor(): GuiTableDataRequestExecutorInterface
     {
         return $this->getProvidedDependency(MerchantRelationRequestMerchantPortalGuiDependencyProvider::SERVICE_GUI_TABLE_HTTP_DATA_REQUEST_EXECUTOR);
     }
 
-    /**
-     * @return \Spryker\Shared\GuiTable\GuiTableFactoryInterface
-     */
     public function getGuiTableFactory(): GuiTableFactoryInterface
     {
         return $this->getProvidedDependency(MerchantRelationRequestMerchantPortalGuiDependencyProvider::SERVICE_GUI_TABLE_FACTORY);
     }
 
-    /**
-     * @return \Spryker\Shared\ZedUi\ZedUiFactoryInterface
-     */
     public function getZedUiFactory(): ZedUiFactoryInterface
     {
         return $this->getProvidedDependency(MerchantRelationRequestMerchantPortalGuiDependencyProvider::SERVICE_ZED_UI_FACTORY);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Service\MerchantRelationRequestMerchantPortalGuiToUtilDateTimeServiceInterface
-     */
     public function getDateTimeService(): MerchantRelationRequestMerchantPortalGuiToUtilDateTimeServiceInterface
     {
         return $this->getProvidedDependency(MerchantRelationRequestMerchantPortalGuiDependencyProvider::SERVICE_DATE_TIME);
     }
 
-    /**
-     * @return \Twig\Environment
-     */
     protected function getTwigEnvironment(): Environment
     {
         return $this->getProvidedDependency(MerchantRelationRequestMerchantPortalGuiDependencyProvider::SERVICE_TWIG);

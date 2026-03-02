@@ -24,10 +24,6 @@ class MerchantRelationTableUrlBuilder implements MerchantRelationTableUrlBuilder
      */
     protected MerchantRelationRequestMerchantPortalGuiToUtilDateTimeServiceInterface $dateTimeService;
 
-    /**
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\MerchantRelationRequestMerchantPortalGuiConfig $merchantRelationRequestMerchantPortalGuiConfig
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Service\MerchantRelationRequestMerchantPortalGuiToUtilDateTimeServiceInterface $dateTimeService
-     */
     public function __construct(
         MerchantRelationRequestMerchantPortalGuiConfig $merchantRelationRequestMerchantPortalGuiConfig,
         MerchantRelationRequestMerchantPortalGuiToUtilDateTimeServiceInterface $dateTimeService
@@ -36,11 +32,6 @@ class MerchantRelationTableUrlBuilder implements MerchantRelationTableUrlBuilder
         $this->dateTimeService = $dateTimeService;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestTransfer $merchantRelationRequestTransfer
-     *
-     * @return string|null
-     */
     public function buildMerchantRelationTableUrl(
         MerchantRelationRequestTransfer $merchantRelationRequestTransfer
     ): ?string {

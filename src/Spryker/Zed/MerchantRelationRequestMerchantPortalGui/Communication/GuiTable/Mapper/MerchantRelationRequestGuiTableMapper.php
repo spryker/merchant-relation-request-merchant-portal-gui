@@ -71,12 +71,6 @@ class MerchantRelationRequestGuiTableMapper implements MerchantRelationRequestGu
         MerchantRelationRequestGuiTableConfigurationProvider::COL_KEY_BUSINESS_UNIT_OWNER => self::COL_COMPANY_BUSINESS_UNIT_NAME,
     ];
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestTableCriteriaTransfer $merchantRelationRequestTableCriteriaTransfer
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestCriteriaTransfer $merchantRelationRequestCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationRequestCriteriaTransfer
-     */
     public function mapMerchantRelationRequestTableCriteriaTransferToMerchantRelationRequestCriteriaTransfer(
         MerchantRelationRequestTableCriteriaTransfer $merchantRelationRequestTableCriteriaTransfer,
         MerchantRelationRequestCriteriaTransfer $merchantRelationRequestCriteriaTransfer
@@ -111,12 +105,6 @@ class MerchantRelationRequestGuiTableMapper implements MerchantRelationRequestGu
         return $merchantRelationRequestCriteriaTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantUserTransfer $merchantUserTransfer
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestCriteriaTransfer $merchantRelationRequestCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationRequestCriteriaTransfer
-     */
     public function mapMerchantUserTransferToMerchantRelationRequestCriteriaTransfer(
         MerchantUserTransfer $merchantUserTransfer,
         MerchantRelationRequestCriteriaTransfer $merchantRelationRequestCriteriaTransfer
@@ -128,12 +116,6 @@ class MerchantRelationRequestGuiTableMapper implements MerchantRelationRequestGu
         return $merchantRelationRequestCriteriaTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestCollectionTransfer $merchantRelationRequestCollectionTransfer
-     * @param \Generated\Shared\Transfer\GuiTableDataResponseTransfer $guiTableDataResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableDataResponseTransfer
-     */
     public function mapMerchantRelationRequestCollectionTransferToGuiTableDataResponseTransfer(
         MerchantRelationRequestCollectionTransfer $merchantRelationRequestCollectionTransfer,
         GuiTableDataResponseTransfer $guiTableDataResponseTransfer
@@ -147,12 +129,6 @@ class MerchantRelationRequestGuiTableMapper implements MerchantRelationRequestGu
         return $guiTableDataResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestTableCriteriaTransfer $merchantRelationRequestTableCriteriaTransfer
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestConditionsTransfer $merchantRelationRequestConditionsTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationRequestConditionsTransfer
-     */
     protected function mapMerchantRelationRequestTableCriteriaTransferToMerchantRelationRequestConditionsTransfer(
         MerchantRelationRequestTableCriteriaTransfer $merchantRelationRequestTableCriteriaTransfer,
         MerchantRelationRequestConditionsTransfer $merchantRelationRequestConditionsTransfer

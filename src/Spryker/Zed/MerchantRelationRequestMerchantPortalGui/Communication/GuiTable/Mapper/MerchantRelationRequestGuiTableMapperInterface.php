@@ -15,34 +15,16 @@ use Generated\Shared\Transfer\MerchantUserTransfer;
 
 interface MerchantRelationRequestGuiTableMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestTableCriteriaTransfer $merchantRelationRequestTableCriteriaTransfer
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestCriteriaTransfer $merchantRelationRequestCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationRequestCriteriaTransfer
-     */
     public function mapMerchantRelationRequestTableCriteriaTransferToMerchantRelationRequestCriteriaTransfer(
         MerchantRelationRequestTableCriteriaTransfer $merchantRelationRequestTableCriteriaTransfer,
         MerchantRelationRequestCriteriaTransfer $merchantRelationRequestCriteriaTransfer
     ): MerchantRelationRequestCriteriaTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantUserTransfer $merchantUserTransfer
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestCriteriaTransfer $merchantRelationRequestCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationRequestCriteriaTransfer
-     */
     public function mapMerchantUserTransferToMerchantRelationRequestCriteriaTransfer(
         MerchantUserTransfer $merchantUserTransfer,
         MerchantRelationRequestCriteriaTransfer $merchantRelationRequestCriteriaTransfer
     ): MerchantRelationRequestCriteriaTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestCollectionTransfer $merchantRelationRequestCollectionTransfer
-     * @param \Generated\Shared\Transfer\GuiTableDataResponseTransfer $guiTableDataResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableDataResponseTransfer
-     */
     public function mapMerchantRelationRequestCollectionTransferToGuiTableDataResponseTransfer(
         MerchantRelationRequestCollectionTransfer $merchantRelationRequestCollectionTransfer,
         GuiTableDataResponseTransfer $guiTableDataResponseTransfer

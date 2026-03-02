@@ -31,10 +31,6 @@ class MerchantNotificationSender implements MerchantNotificationSenderInterface
      */
     protected MerchantRelationRequestMerchantPortalGuiToMailFacadeInterface $mailFacade;
 
-    /**
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\MerchantRelationRequestMerchantPortalGuiConfig $merchantRelationRequestMerchantPortalGuiConfig
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Facade\MerchantRelationRequestMerchantPortalGuiToMailFacadeInterface $mailFacade
-     */
     public function __construct(
         MerchantRelationRequestMerchantPortalGuiConfig $merchantRelationRequestMerchantPortalGuiConfig,
         MerchantRelationRequestMerchantPortalGuiToMailFacadeInterface $mailFacade
@@ -43,11 +39,6 @@ class MerchantNotificationSender implements MerchantNotificationSenderInterface
         $this->mailFacade = $mailFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationRequestCollectionResponseTransfer $merchantRelationRequestCollectionResponseTransfer
-     *
-     * @return void
-     */
     public function sentNotificationToMerchant(
         MerchantRelationRequestCollectionResponseTransfer $merchantRelationRequestCollectionResponseTransfer
     ): void {
@@ -85,9 +76,6 @@ class MerchantNotificationSender implements MerchantNotificationSenderInterface
         return $merchantTransfers;
     }
 
-    /**
-     * @return string
-     */
     protected function createMerchantRelationRequestTableLink(): string
     {
         return sprintf(

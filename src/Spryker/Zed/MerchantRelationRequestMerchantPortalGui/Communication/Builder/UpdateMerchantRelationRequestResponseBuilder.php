@@ -32,11 +32,6 @@ class UpdateMerchantRelationRequestResponseBuilder implements UpdateMerchantRela
      */
     protected MerchantRelationRequestMerchantPortalGuiToGlossaryFacadeInterface $glossaryFacade;
 
-    /**
-     * @param \Spryker\Shared\ZedUi\ZedUiFactoryInterface $zedUiFactory
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Facade\MerchantRelationRequestMerchantPortalGuiToTranslatorFacadeInterface $translatorFacade
-     * @param \Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Dependency\Facade\MerchantRelationRequestMerchantPortalGuiToGlossaryFacadeInterface $glossaryFacade
-     */
     public function __construct(
         ZedUiFactoryInterface $zedUiFactory,
         MerchantRelationRequestMerchantPortalGuiToTranslatorFacadeInterface $translatorFacade,
@@ -107,12 +102,6 @@ class UpdateMerchantRelationRequestResponseBuilder implements UpdateMerchantRela
         return array_merge($responseData, $zedUiFormResponseBuilder->createResponse()->toArray());
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormInterface $form
-     * @param \Spryker\Shared\ZedUi\Configuration\ZedUiFormResponseBuilderInterface $zedUiFormResponseBuilder
-     *
-     * @return \Spryker\Shared\ZedUi\Configuration\ZedUiFormResponseBuilderInterface
-     */
     protected function addFormErrors(
         FormInterface $form,
         ZedUiFormResponseBuilderInterface $zedUiFormResponseBuilder

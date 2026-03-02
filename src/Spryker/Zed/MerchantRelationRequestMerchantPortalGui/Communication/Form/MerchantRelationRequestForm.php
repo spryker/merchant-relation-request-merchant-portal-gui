@@ -84,19 +84,11 @@ class MerchantRelationRequestForm extends AbstractType
      */
     protected const FIELD_DECISION_NOTE_MAX_LENGTH = 5000;
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return '';
     }
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
