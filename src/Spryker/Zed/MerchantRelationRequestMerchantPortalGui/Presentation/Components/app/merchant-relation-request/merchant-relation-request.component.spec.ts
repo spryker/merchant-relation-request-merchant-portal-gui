@@ -13,7 +13,7 @@ import { By } from '@angular/platform-browser';
     standalone: false,
 })
 class TestHostComponent {
-    @Input() tableConfig?: any;
+    @Input() tableConfig?: unknown;
     @Input() tableId?: string;
 }
 
