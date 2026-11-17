@@ -93,9 +93,8 @@ class MerchantRelationRequestReader implements MerchantRelationRequestReaderInte
             $companyFilterOptions = $this->addInCompanyIdsFilterOptions($companyFilterOptions, $merchantRelationRequestCollectionTransfer);
 
             $offset += $readCollectionBatchSize;
-        } while (
-            count($merchantRelationRequestCollectionTransfer->getMerchantRelationRequests()) !== 0
-        );
+            $hasNextBatch = count($merchantRelationRequestCollectionTransfer->getMerchantRelationRequests()) !== 0;
+        } while ($hasNextBatch);
 
         return $companyFilterOptions;
     }
